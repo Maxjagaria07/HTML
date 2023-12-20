@@ -1,0 +1,89 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WORD</title>
+    <style>
+        .main
+        {
+            height: 500px;
+            width: auto;
+            border: 10px solid black;
+        }
+
+        .display input
+        {
+            height: 200px;
+            width: 1510px;
+            border: 10px solid black;
+            font-size: 60px;
+        }
+
+        .options button
+        {
+            height:100px;
+            width: 150px;
+            font-size: 23px;
+            margin: 30px;
+        }
+    </style>
+</head>
+<body>
+        <div class="main">
+
+            <div class="display">
+                <input type="text" id="display" value="">
+            </div>
+
+            <div class="options">
+                <button onclick="uppercase()">UPPERCASE</button>
+                <button onclick="lowercase()">LOWERCASE</button>
+                <button onclick="charlen()">CHARACTER COUNT</button>
+                <button onclick="replace()">REPLACE</button>
+                <button onclick="trim()">TRIM</button>
+                <button onclick="clear()">CLEAR</button>
+            </div>
+            
+        </div>   
+
+        <script>
+            function uppercase(){
+                
+                let x=document.getElementById("display").value;
+                console.log(x.toUpperCase());
+            }
+
+            function lowercase(){
+                
+                let x=document.getElementById("display").value;
+                console.log(x.toLowerCase());
+            }
+
+            function charlen(){
+                
+                let x=document.getElementById("display").value;
+                console.log(x.length);
+            }
+
+            function replace(){
+                
+                let x=document.getElementById("display").value;
+                console.log(x.replace('h','g'));
+            }
+
+            function trim(){
+                
+                let x=document.getElementById("display").value;
+                console.log(x.trim());
+            }
+
+            function clear(){
+                
+                let x=document.getElementById("display").value;
+                console.log(x.clear);
+            }
+
+        </script>
+</body>
+</html>

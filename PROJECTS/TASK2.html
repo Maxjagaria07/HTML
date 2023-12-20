@@ -1,0 +1,58 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INPUT VALIDATION WITH 1 FUNCTION</title>
+</head>
+<body>
+        <input type="text" id="name" onblur="func(this , 'error1' , 'USERNAME')">
+        <span id="error1"></span>
+
+        <br><br>
+
+        <input type="text" id="email" onblur="func(this , 'error2' , 'EMAIL')">
+        <span id="error2"></span>
+
+        <br><br>
+
+        <input type="text" id="password" onblur="func(this , 'error3' , 'PASSWORD')">
+        <span id="error3"></span>
+
+        <br><br>
+
+        <input type="text" id="mobile" onblur="func(this , 'error4' , 'MOBILE NUMBER')">
+        <span id="error4"></span>
+
+        <br><br>
+
+
+
+
+
+        <script>
+            function func(a , message , correction) {
+
+                if (a.value == "") {
+                    document.getElementById(message).innerHTML="ENTER A VALID "+correction
+                }
+                else
+                {
+                    document.getElementById(message).innerHTML=""
+                }
+
+                // getname=document.getElementById("name").value
+                // console.log(getname);
+
+                // if (getname == "") {
+                //     document.getElementById(message).innerHTML="ENTER A VALID "+correction
+                // }
+                // else
+                // {
+                //     document.getElementById(message).innerHTML=""
+                // }
+
+            }
+        </script>
+</body>
+</html>
